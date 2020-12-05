@@ -7,12 +7,13 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    var count: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val count: Int = 0
+
 
         button.setOnClickListener {
             count++
@@ -25,13 +26,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         button3.setOnClickListener {
-            count+10
+            count+=10
             countText.text = count.toString()
         }
 
         button4.setOnClickListener {
-            count - 10
+            count -= 10
             countText.text = count.toString()
+            //common()
         }
 
 
@@ -39,5 +41,19 @@ class MainActivity : AppCompatActivity() {
         button2.setBackgroundColor(Color.parseColor("#47885e"))
         button3.setBackgroundColor(Color.parseColor("#47885e"))
         button4.setBackgroundColor(Color.parseColor("#47885e"))
+
+
     }
+
+    //関数
+//    fun common(){
+//        when(count){
+//            1->{
+//
+//            }
+//
+//        }
+//
+//
+//    }
 }
